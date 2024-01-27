@@ -35,7 +35,9 @@ class MyWidget extends StatelessWidget {
     itemBuilder: (BuildContext context, int index) {
       return Container(
         height: 100,
-        
+        child: Align(
+
+alignment: Alignment.centerLeft,
         child: Column(
           children: <Widget>[
             Text('Строка ${entries[index]}',
@@ -45,6 +47,7 @@ class MyWidget extends StatelessWidget {
               fontSize: 50,
             ),
             ),
+          
             Text('${entries[index]}',
             textAlign: TextAlign.right,
             style: TextStyle(
@@ -52,7 +55,7 @@ class MyWidget extends StatelessWidget {
               fontSize: 24,
             ),)
           ],),
-   
+        ),
         decoration: BoxDecoration(
           color: Colors.blue[colorCodes[index]],
           borderRadius: BorderRadius.all(Radius.circular(10)),
